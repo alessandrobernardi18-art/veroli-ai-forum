@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Veroli e l'AI - L'Intelligenza Artificiale per Tutti | 13-14 Febbraio 2026</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Primo Forum sull'Intelligenza Artificiale a Veroli. 13-14 Febbraio 2026, Sala Trulli. Due giorni di conferenze, workshop e networking per scoprire come l'AI può trasformare imprese e territorio."/>
+<meta name="keywords" content="Intelligenza Artificiale, AI Forum, Veroli, Innovation Bridge, Tecnologia, Imprese, Eventi AI, Workshop"/>
+<meta name="author" content="AI Forum Veroli"/>
+
+<!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+<meta property="og:title" content="Veroli e l'AI - L'Intelligenza Artificiale per Tutti"/>
+<meta property="og:description" content="13-14 Febbraio 2026 | Sala Trulli, Veroli. Il primo forum dedicato all'AI per imprese, professionisti e cittadini. Scopri come l'intelligenza artificiale può trasformare il nostro territorio."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="it_IT"/>
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Veroli e l'AI - L'Intelligenza Artificiale per Tutti"/>
+<meta name="twitter:description" content="13-14 Febbraio 2026 | Primo Forum AI a Veroli. Due giorni di innovazione, formazione e networking."/>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --dark: #1a1a1a;
+    --rust: #c0522a;
+    --rust-light: #e8764a;
+    --gold: #d4a843;
+    --gold-light: #ecc86b;
+    --sage: #6b7f5e;
+    --cyan: #00d4ff;
+    --cyan-dark: #0099cc;
+    --text-muted: #6b6560;
+    --shadow: 0 8px 40px rgba(26,26,26,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 420px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px 80px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 80%, rgba(0,212,255,0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 50% at 85% 30%, rgba(192,82,42,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 50% 100%, rgba(212,168,67,0.1) 0%, transparent 70%);
+    z-index: 0;
+  }
+  .hero-dots {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.04;
+    background-image: radial-gradient(circle, #00d4ff 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 900px; }
+
+  .hero-badge {
+    display: inline-block;
+    border: 1px solid rgba(0,212,255,0.4);
+    color: var(--cyan);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+    animation: fadeDown 0.8s ease both;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 8vw, 72px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    animation: fadeUp 0.9s ease 0.15s both;
+    margin-bottom: 12px;
+  }
+  .hero h1 .highlight { 
+    background: linear-gradient(135deg, var(--cyan), var(--cyan-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    color: rgba(255,255,255,0.6);
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 18px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    animation: fadeUp 0.9s ease 0.3s both;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+    animation: fadeUp 0.9s ease 0.45s both;
+    flex-wrap: wrap;
+  }
+  .hero-meta-item { text-align: center; }
+  .hero-meta-item .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 6px;
+  }
+  .hero-meta-item .value {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .hero-meta-item .value .highlight { color: var(--cyan); }
+
+  /* ─── LOGOS SECTION ─── */
+  .logos-section {
+    background: #fff;
+    padding: 32px 24px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .logos-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .logos-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo-placeholder {
+    width: 140px;
+    height: 80px;
+    background: linear-gradient(135deg, #f0f0f0, #fafafa);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  /* ─── SECTION TITLES ─── */
+  .section-title {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-title .eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--rust);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  /* ─── AUDIENCE STRIP ─── */
+  .audience-strip {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 56px 24px;
+    flex-wrap: wrap;
+    background: var(--cream);
+  }
+  .audience-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 28px 28px;
+    width: 240px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .audience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 54px rgba(26,26,26,0.18);
+  }
+  .audience-card .icon {
+    font-size: 38px;
+    margin-bottom: 14px;
+  }
+  .audience-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
+  }
+  .audience-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ─── PROGRAM ─── */
+  .program-section { 
+    padding: 72px 24px; 
+    max-width: 820px; 
+    margin: 0 auto;
+    background: var(--cream);
+  }
+  .program-block {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .program-timeline {
+    position: relative;
+    width: 32px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(0,212,255,0.15);
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+  .timeline-line {
+    flex: 1;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(0,212,255,0.3) 0%, rgba(0,212,255,0.1) 100%);
+    margin-top: 8px;
+    min-height: 60px;
+  }
+
+  .program-card {
+    flex: 1;
+    background: #fff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--cyan);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .program-card:hover {
+    transform: translateX(6px);
+    box-shadow: 0 12px 48px rgba(26,26,26,0.16);
+  }
+  .program-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .program-time {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cyan-dark);
+    letter-spacing: 0.5px;
+  }
+  .program-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .tag-intro { background: rgba(0,212,255,0.12); color: var(--cyan-dark); }
+  .tag-demo { background: rgba(192,82,42,0.12); color: var(--rust); }
+  .tag-talk { background: rgba(107,127,94,0.12); color: var(--sage); }
+  .tag-qa { background: rgba(212,168,67,0.12); color: var(--gold); }
+  .tag-networking { background: rgba(0,212,255,0.08); color: var(--cyan-dark); }
+  .tag-saluti { background: rgba(212,168,67,0.12); color: var(--gold); }
+  .tag-casi { background: rgba(192,82,42,0.12); color: var(--rust); }
+
+  .program-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--dark);
+    line-height: 1.4;
+  }
+  .program-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .speaker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--dark);
+    margin-top: 14px;
+  }
+
+  .day-divider {
+    text-align: center;
+    margin: 72px 0 56px;
+    position: relative;
+  }
+  .day-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,212,255,0.2) 50%, transparent);
+  }
+  .day-divider-content {
+    display: inline-block;
+    background: var(--cream);
+    padding: 0 32px;
+    position: relative;
+  }
+  .day-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--cyan);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .day-date {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .networking-card {
+    background: linear-gradient(135deg, #fff 0%, #f5f0e8 100%);
+    border-left-color: var(--gold);
+  }
+
+  /* ─── Q&A SECTION ─── */
+  .qa-section {
+    padding: 72px 24px;
+    background: #fff;
+  }
+  .qa-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .qa-intro {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+  .qa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .qa-item {
+    background: var(--cream);
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .qa-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(26,26,26,0.08);
+  }
+  .q-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .qa-item p {
+    font-size: 14px;
+    color: var(--dark);
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  /* ─── FOOTER ─── */
+  .footer-section {
+    background: var(--dark);
+    color: rgba(255,255,255,0.6);
+    padding: 48px 24px;
+    text-align: center;
+  }
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .hero { padding: 48px 20px 64px; min-height: 360px; }
+    .hero h1 { font-size: 36px; }
+    .hero-sub { font-size: 16px; }
+    .hero-meta { gap: 24px; margin-top: 32px; }
+    
+    .audience-strip { gap: 16px; padding: 40px 20px; }
+    .audience-card { width: 100%; max-width: 320px; }
+    
+    .program-section { padding: 48px 20px; }
+    .program-block { gap: 16px; }
+    .program-timeline { width: 24px; }
+    .timeline-dot { width: 12px; height: 12px; }
+    .program-card { padding: 20px; }
+    .program-card h3 { font-size: 16px; }
+    
+    .day-divider { margin: 56px 0 40px; }
+    .day-number { font-size: 36px; }
+    
+    .qa-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Evento Pubblico Gratuito · Veroli</div>
+    <p class="hero-sub" style="margin-top: 16px; margin-bottom: 8px; font-size: 22px; font-weight: 600; color: var(--cyan); letter-spacing: 1px;">1° FORUM</p>
+    <h1>VEROLI E <span class="highlight">L'AI</span></h1>
+    <p class="hero-sub">L'Intelligenza Artificiale per Tutti</p>
+    <p class="hero-sub" style="margin-top: 12px; font-weight: 500; color: rgba(255,255,255,0.8);">Esempi concreti, demo dal vivo e strumenti da portare a casa.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="label">Date</div>
+        <div class="value"><span class="highlight">13-14 Febbraio</span> 2026</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="label">Orari</div>
+        <div class="value">Ven 17:30-20:00 · Sab 9:00-12:30</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="label">Sede</div>
+        <div class="value">Sala Trulli, Veroli</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="label">Ingresso</div>
+        <div class="value" style="color: var(--gold-light);">Gratuito</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PARTNER LOGOS ─── -->
+<section class="logos-section">
+  <div class="logos-label">In collaborazione con</div>
+  <div class="logos-container">
+    <div class="logo-item">
+      <div class="logo-placeholder">COMUNE DI<br/>VEROLI</div>
+    </div>
+    <div class="logo-item">
+      <div class="logo-placeholder">INNOVATION<br/>BRIDGE</div>
+    </div>
+    <div class="logo-item">
+      <div class="logo-placeholder">UNIVERSITÀ<br/>DI CASSINO</div>
+    </div>
+    <div class="logo-item">
+      <div class="logo-placeholder">HERNICA SAXA<br/>CITTÀ DELLA CULTURA</div>
+    </div>
+    <div class="logo-item">
+      <div class="logo-placeholder">ADPM<br/>DRONES</div>
+    </div>
+    <div class="logo-item">
+      <div class="logo-placeholder">INFINITE<br/>VISION</div>
+    </div>
+    <div class="logo-item">
+      <div class="logo-placeholder">HUMANS<br/>TECH</div>
+    </div>
+    <div class="logo-item">
+      <div class="logo-placeholder">DOPAMINA</div>
+    </div>
+    <div class="logo-item">
+      <div class="logo-placeholder">SEEWEB</div>
+    </div>
+    <div class="logo-item">
+      <div class="logo-placeholder">SYSTEM<br/>BYTE</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── A CHI È RIVOLTO ─── -->
+<section class="audience-strip">
+  <div class="audience-card">
+    <div class="icon">🏘️</div>
+    <h4>Cittadini</h4>
+    <p>Scopri come l'IA entra già nella tua vita quotidiana e come usarla a tuo vantaggio.</p>
+  </div>
+  <div class="audience-card">
+    <div class="icon">🎓</div>
+    <h4>Studenti</h4>
+    <p>Orientati nelle professioni del futuro e sperimenta hands-on le nuove tecnologie.</p>
+  </div>
+  <div class="audience-card">
+    <div class="icon">📊</div>
+    <h4>Imprenditori e PMI</h4>
+    <p>Valuta come integrare l'IA nei tuoi processi aziendali senza grandi investimenti.</p>
+  </div>
+</section>
+
+<!-- ─── PROGRAMMA ─── -->
+<section class="program-section">
+  <div class="section-title">
+    <div class="eyebrow">13-14 Febbraio 2026</div>
+    <h2>Programma Completo</h2>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- GIORNO 1 - VENERDÌ 13 FEBBRAIO -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="day-divider">
+    <div class="day-divider-content">
+      <div class="day-number">Giorno 1</div>
+      <div class="day-date">Venerdì 13 Febbraio · 17:30 - 20:00</div>
+    </div>
+  </div>
+
+  <!-- Presentazione Innovation Bridge -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">17:30</span>
+        <span class="program-tag tag-intro">Introduzione</span>
+      </div>
+      <h3>Saluti e Presentazione Innovation Bridge</h3>
+      <p>Apertura ufficiale del forum con i saluti istituzionali del Comune di Veroli e la presentazione di Innovation Bridge, l'acceleratore che collega startup, imprese e territorio.</p>
+      <div class="speaker">🎤 <strong>Comune di Veroli</strong></div>
+      <div class="speaker">🎤 <strong>Innovation Bridge</strong></div>
+    </div>
+  </div>
+
+  <!-- L'AI vi regala il tempo -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">17:45 (20 min)</span>
+        <span class="program-tag tag-talk">Talk Introduttivo</span>
+      </div>
+      <h3>"L'AI vi regala la cosa più preziosa che non potete comprare: il tempo"</h3>
+      <p>Un'introduzione accessibile e pratica all'intelligenza artificiale. Come l'AI può semplificare la vita quotidiana, automatizzare compiti ripetitivi e liberare tempo per ciò che conta davvero.</p>
+      <div class="speaker">🎤 <strong>Alessandro Bernardi, Marketing Manager @ GE HealthCare</strong></div>
+      <div class="speaker" style="margin-top: 8px; font-size: 13px; opacity: 0.8;">Componente AI Forum Veroli</div>
+    </div>
+  </div>
+
+  <!-- Demo Live -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">18:05 (40 min)</span>
+        <span class="program-tag tag-demo">Demo Live</span>
+      </div>
+      <h3>Demo Live: "L'AI non è magIA: esempi pratici che funzionano davvero"</h3>
+      <p>Dimostrazione pratica e interattiva di strumenti di intelligenza artificiale utilizzabili da subito. Dalle applicazioni quotidiane agli usi professionali, esempi concreti di come l'AI può migliorare la produttività.</p>
+      <div class="speaker">🎤 <strong>Daniele Pigliacelli, Co-founder @ Dopamina</strong></div>
+      <div class="speaker" style="margin-top: 8px; font-size: 13px; opacity: 0.8;">Componente AI Forum Veroli</div>
+    </div>
+  </div>
+
+  <!-- Q&A -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">18:45 (15 min)</span>
+        <span class="program-tag tag-qa">Q&A</span>
+      </div>
+      <h3>Sessione Domande & Risposte</h3>
+      <p>Spazio aperto per domande, curiosità e chiarimenti con i relatori. Un momento di confronto diretto per approfondire i temi trattati.</p>
+    </div>
+  </div>
+
+  <!-- Networking -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+    </div>
+    <div class="program-card networking-card">
+      <div class="program-card-header">
+        <span class="program-time">19:00 (60 min)</span>
+        <span class="program-tag tag-networking">Networking</span>
+      </div>
+      <h3>Conclusioni e Aperitivo di Networking</h3>
+      <p>Momento informale di networking tra partecipanti, relatori e organizzatori. Un'occasione per creare connessioni, scambiare idee e approfondire collaborazioni.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- GIORNO 2 - SABATO 14 FEBBRAIO -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="day-divider">
+    <div class="day-divider-content">
+      <div class="day-number">Giorno 2</div>
+      <div class="day-date">Sabato 14 Febbraio · 9:00 - 12:30</div>
+    </div>
+  </div>
+
+  <!-- Saluti -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">9:00</span>
+        <span class="program-tag tag-saluti">Apertura</span>
+      </div>
+      <h3>Saluti e introduzione alla giornata</h3>
+      <p>Apertura della sessione dedicata alle aziende del territorio. Presentazione degli speaker e delle tematiche che verranno affrontate durante la mattinata.</p>
+      <div class="speaker">🎤 <strong>Comune di Veroli</strong></div>
+    </div>
+  </div>
+
+  <!-- ADPM DRONES -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">9:40 (20 min)</span>
+        <span class="program-tag tag-casi">Azienda</span>
+      </div>
+      <h3>ADPM DRONES - Droni che cambiano la prospettiva</h3>
+      <p>Come l'intelligenza artificiale sta rivoluzionando il settore dei droni: applicazioni pratiche, casi d'uso concreti e prospettive future nel territorio.</p>
+      <div class="speaker">🎤 <strong>Luca Brizzi, CEO ADPM DRONES</strong></div>
+    </div>
+  </div>
+
+  <!-- Infinite Vision -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">10:00 (20 min)</span>
+        <span class="program-tag tag-casi">Azienda</span>
+      </div>
+      <h3>Infinite Vision - IA e Life Science</h3>
+      <p>L'applicazione dell'intelligenza artificiale a supporto dell'innovazione e della strategia aziendale nel mondo life science, per decisioni più solide e un impatto più concreto sul paziente.</p>
+      <div class="speaker">🎤 <strong>Mirko Gabriele, CEO Infinite Vision</strong></div>
+    </div>
+  </div>
+
+  <!-- Humans Tech -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">10:20 (20 min)</span>
+        <span class="program-tag tag-casi">Azienda</span>
+      </div>
+      <h3>Humans.tech - Intelligenza Artificiale in azienda: dal potenziale agli strumenti operativi</h3>
+      <p>L'intelligenza artificiale al servizio delle aziende: innovazioni tecnologiche, applicazioni pratiche e impatto sul territorio.</p>
+      <div class="speaker">🎤 <strong>Marco Ciotoli, Co-Founder & COO @ Humans.tech</strong></div>
+    </div>
+  </div>
+
+  <!-- FAO -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">10:40 (20 min)</span>
+        <span class="program-tag tag-talk">Talk Speciale</span>
+      </div>
+      <h3>Dati Geospaziali e AI - L'esperienza FAO</h3>
+      <p>Come l'intelligenza artificiale e i dati geospaziali stanno trasformando l'agricoltura e la gestione delle risorse a livello globale. Un'esperienza internazionale applicabile al territorio locale.</p>
+      <div class="speaker">🎤 <strong>Eng. Gianfausto Bottini, Geospatial Data Scientist at FAO of the United Nations</strong></div>
+    </div>
+  </div>
+
+  <!-- Coffee Break -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card" style="background: linear-gradient(135deg, #f5f0e8, #fff); border-left: 4px solid var(--gold);">
+      <div class="program-card-header">
+        <span class="program-time">11:00 (20 min)</span>
+        <span class="program-tag" style="background: #fff3e0; color: var(--gold);">Pausa</span>
+      </div>
+      <h3>Coffee Break</h3>
+      <p>Momento di pausa e networking tra i partecipanti.</p>
+    </div>
+  </div>
+
+  <!-- Prof. Russo UNICAS -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">11:20 (20 min)</span>
+        <span class="program-tag tag-talk">Talk Accademico</span>
+      </div>
+      <h3>Intelligenza Artificiale - Prospettive Accademiche e Applicazioni</h3>
+      <p>Il punto di vista accademico sull'evoluzione dell'intelligenza artificiale: dalla ricerca alle applicazioni pratiche, le prospettive e le sfide del settore viste dal Dipartimento di Ingegneria Elettrica e Informatica.</p>
+      <div class="speaker">🎤 <strong>Prof. Ciro Russo, UNICAS - Dipartimento di Ingegneria Elettrica e Informatica</strong></div>
+    </div>
+  </div>
+
+  <!-- Seeweb -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">11:40 (20 min)</span>
+        <span class="program-tag tag-casi">Azienda</span>
+      </div>
+      <h3>AI privata in produzione: il dietro le quinte di regolo.ai</h3>
+      <p>Un'immersione tecnica nell'infrastruttura e nell'architettura che alimenta regolo.ai, la soluzione di intelligenza artificiale privata sviluppata da Seeweb.</p>
+      <div class="speaker">🎤 <strong>Seeweb</strong></div>
+    </div>
+  </div>
+
+  <!-- Avvocato Petrillo -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">12:00 (20 min)</span>
+        <span class="program-tag tag-talk">Intervento Legale</span>
+      </div>
+      <h3>Implicazioni Legali dell'Intelligenza Artificiale</h3>
+      <p>Analisi delle implicazioni legali dell'intelligenza artificiale nel contesto aziendale: normative, responsabilità, privacy, proprietà intellettuale e aspetti contrattuali. Una panoramica essenziale per navigare il quadro giuridico dell'AI.</p>
+      <div class="speaker">🎤 <strong>Avv. Oreste Maria Petrillo</strong></div>
+      <div class="speaker" style="margin-top: 8px; font-size: 13px; opacity: 0.8;">Esperto in diritto d'impresa e diritto digitale</div>
+    </div>
+  </div>
+
+  <!-- Chiusura -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+    </div>
+    <div class="program-card networking-card">
+      <div class="program-card-header">
+        <span class="program-time">12:20</span>
+        <span class="program-tag">Chiusura</span>
+      </div>
+      <h3>Tavola Rotonda e Conclusioni</h3>
+      <p>Discussione aperta con tutti i relatori, domande dal pubblico e riflessioni finali sull'applicazione dell'intelligenza artificiale nelle aziende del territorio. La tavola rotonda sarà moderata da <strong>Daniele Pigliacelli</strong> - componente AI FORUM VEROLI.</p>
+      <div class="speaker">🎤 <strong>Moderatore: Daniele Pigliacelli</strong></div>
+      <div class="speaker" style="margin-top: 12px;">🎤 <strong>Con tutti i relatori della giornata</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AI FORUM VEROLI ─── -->
+<section class="logos-section" style="background: #fff; border-top: 1px solid rgba(0,0,0,0.05);">
+  <div class="logos-label" style="color: var(--cyan-dark);">AI FORUM VEROLI</div>
+  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <p style="font-size: 15px; color: var(--dark); font-weight: 500; line-height: 1.8;">
+      <strong>Componenti AI FORUM VEROLI:</strong><br/>
+      Daniele Pigliacelli · Alessandro Bernardi · Claudio Macciocchi Paolini · Francesco Pigliacelli · Dino Quattrociocchi
+    </p>
+  </div>
+</section>
+
+<!-- ─── Q&A EXAMPLES SECTION ─── -->
+<section class="qa-section">
+  <div class="qa-container">
+    <div class="section-title">
+      <div class="eyebrow">Domande & Risposte</div>
+      <h2>Esempi di domande che puoi fare</h2>
+    </div>
+    <p class="qa-intro">
+      Durante la sessione Q&A potrai fare qualsiasi domanda sull'intelligenza artificiale. Ecco alcuni esempi per ispirarti:
+    </p>
+    <div class="qa-grid">
+      <div class="qa-item">
+        <div class="q-icon">💼</div>
+        <p>Come può l'IA migliorare la produttività nella mia piccola/media impresa?</p>
+      </div>
+      <div class="qa-item">
+        <div class="q-icon">💰</div>
+        <p>Quali strumenti di IA sono accessibili e a basso costo per iniziare?</p>
+      </div>
+      <div class="qa-item">
+        <div class="q-icon">📚</div>
+        <p>Come formare il personale all'uso dell'intelligenza artificiale?</p>
+      </div>
+      <div class="qa-item">
+        <div class="q-icon">🤔</div>
+        <p>L'IA sostituirà posti di lavoro o ne creerà di nuovi?</p>
+      </div>
+      <div class="qa-item">
+        <div class="q-icon">⚖️</div>
+        <p>Quali sono i rischi legali e di privacy nell'uso dell'IA in azienda?</p>
+      </div>
+      <div class="qa-item">
+        <div class="q-icon">🔒</div>
+        <p>Come proteggere i dati aziendali quando si usano strumenti di IA?</p>
+      </div>
+      <div class="qa-item">
+        <div class="q-icon">🎯</div>
+        <p>Quali settori traggono maggior beneficio dall'implementazione dell'IA?</p>
+      </div>
+      <div class="qa-item">
+        <div class="q-icon">🚀</div>
+        <p>Da dove iniziare per introdurre l'IA nella mia realtà lavorativa?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<section class="footer-section">
+  <div class="footer-content">
+    <p style="margin-top: 32px; font-size: 12px; opacity: 0.5;">
+      Programma Evento AI - Comune di Veroli - Tutti i diritti riservati
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
