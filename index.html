@@ -3,27 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Veroli e l'AI - L'Intelligenza Artificiale per Tutti | 13-14 Febbraio 2026</title>
-
-<!-- SEO Meta Tags -->
-<meta name="description" content="Primo Forum sull'Intelligenza Artificiale a Veroli. 13-14 Febbraio 2026, Sala Trulli. Due giorni di conferenze, workshop e networking per scoprire come l'AI può trasformare imprese e territorio."/>
-<meta name="keywords" content="Intelligenza Artificiale, AI Forum, Veroli, Innovation Bridge, Tecnologia, Imprese, Eventi AI, Workshop"/>
-<meta name="author" content="AI Forum Veroli"/>
-
-<!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
-<meta property="og:title" content="Veroli e l'AI - L'Intelligenza Artificiale per Tutti"/>
-<meta property="og:description" content="13-14 Febbraio 2026 | Sala Trulli, Veroli. Il primo forum dedicato all'AI per imprese, professionisti e cittadini. Scopri come l'intelligenza artificiale può trasformare il nostro territorio."/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="it_IT"/>
-
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Veroli e l'AI - L'Intelligenza Artificiale per Tutti"/>
-<meta name="twitter:description" content="13-14 Febbraio 2026 | Primo Forum AI a Veroli. Due giorni di innovazione, formazione e networking."/>
-
-<!-- Fonts -->
+<title>Veroli e l'AI - L'Intelligenza Artificiale per Tutti</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-
 <style>
   :root {
     --cream: #f5f0e8;
@@ -255,84 +236,118 @@
     margin: 0 auto;
     background: var(--cream);
   }
-  .program-block {
+
+  .program-day-header {
+    background: linear-gradient(135deg, var(--dark), #2a2520);
+    color: #fff;
+    padding: 24px 32px;
+    border-radius: 16px;
+    margin-bottom: 36px;
+    box-shadow: var(--shadow);
+  }
+  .program-day-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .program-day-header .day-meta {
     display: flex;
     gap: 24px;
-    margin-bottom: 32px;
-    animation: fadeUp 0.6s ease both;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    flex-wrap: wrap;
+  }
+  .program-day-header .day-meta strong {
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  .program-block {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    margin-bottom: 12px;
   }
   .program-timeline {
-    position: relative;
-    width: 32px;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 52px;
+    flex-shrink: 0;
   }
   .timeline-dot {
-    width: 14px;
-    height: 14px;
-    background: var(--cyan);
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(0,212,255,0.15);
-    flex-shrink: 0;
-    margin-top: 8px;
+    border: 3px solid var(--cyan);
+    background: var(--cream);
+    position: relative;
+    z-index: 1;
+    margin-top: 6px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .program-block:hover .timeline-dot {
+    background: var(--cyan);
+    transform: scale(1.2);
   }
   .timeline-line {
-    flex: 1;
-    width: 2px;
-    background: linear-gradient(180deg, rgba(0,212,255,0.3) 0%, rgba(0,212,255,0.1) 100%);
-    margin-top: 8px;
-    min-height: 60px;
+    width: 3px;
+    flex-grow: 1;
+    background: linear-gradient(180deg, var(--cyan) 0%, var(--gold) 100%);
+    min-height: 24px;
+    border-radius: 2px;
   }
+  .program-block:last-child .timeline-line { display: none; }
 
   .program-card {
-    flex: 1;
     background: #fff;
-    padding: 28px;
     border-radius: 16px;
+    padding: 24px 28px;
+    flex-grow: 1;
     box-shadow: var(--shadow);
-    border-left: 4px solid var(--cyan);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.25s ease;
+    margin-bottom: 16px;
   }
-  .program-card:hover {
+  .program-block:hover .program-card {
     transform: translateX(6px);
-    box-shadow: 0 12px 48px rgba(26,26,26,0.16);
   }
   .program-card-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 14px;
-    flex-wrap: wrap;
     gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
   }
   .program-time {
+    background: var(--dark);
+    color: #fff;
     font-size: 13px;
-    font-weight: 700;
-    color: var(--cyan-dark);
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
     letter-spacing: 0.5px;
   }
   .program-tag {
     font-size: 10px;
-    text-transform: uppercase;
     font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 1.5px;
     padding: 4px 12px;
-    border-radius: 20px;
+    border-radius: 12px;
   }
-  .tag-intro { background: rgba(0,212,255,0.12); color: var(--cyan-dark); }
-  .tag-demo { background: rgba(192,82,42,0.12); color: var(--rust); }
-  .tag-talk { background: rgba(107,127,94,0.12); color: var(--sage); }
-  .tag-qa { background: rgba(212,168,67,0.12); color: var(--gold); }
-  .tag-networking { background: rgba(0,212,255,0.08); color: var(--cyan-dark); }
-  .tag-saluti { background: rgba(212,168,67,0.12); color: var(--gold); }
-  .tag-casi { background: rgba(192,82,42,0.12); color: var(--rust); }
+  .tag-saluti { background: #e8f5e9; color: #2e7d32; }
+  .tag-presentazione { background: #fff3e0; color: #e65100; }
+  .tag-talk { background: #fde8df; color: var(--rust); }
+  .tag-demo { background: #e1f5fe; color: #0277bd; }
+  .tag-casi { background: #f3e5f5; color: #6a1b9a; }
+  .tag-qa { background: #fff9c4; color: #f57f17; }
+  .tag-chiusura { background: #e0f2f1; color: #00695c; }
 
   .program-card h3 {
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: var(--dark);
     line-height: 1.4;
   }
@@ -340,95 +355,60 @@
     font-size: 14px;
     color: var(--text-muted);
     line-height: 1.7;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
-  .speaker {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  .program-card .speaker {
     font-size: 13px;
-    color: var(--dark);
-    margin-top: 14px;
+    color: var(--rust);
+    font-weight: 500;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0,0,0,0.05);
   }
 
-  .day-divider {
-    text-align: center;
-    margin: 72px 0 56px;
-    position: relative;
+  /* Special styling for networking card */
+  .program-card.networking-card {
+    background: linear-gradient(135deg, #1a1a1a, #2a2520);
+    color: #fff;
   }
-  .day-divider::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0,212,255,0.2) 50%, transparent);
-  }
-  .day-divider-content {
-    display: inline-block;
-    background: var(--cream);
-    padding: 0 32px;
-    position: relative;
-  }
-  .day-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    font-weight: 900;
-    color: var(--cyan);
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .day-date {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--text-muted);
-    font-weight: 600;
-  }
-
-  .networking-card {
-    background: linear-gradient(135deg, #fff 0%, #f5f0e8 100%);
-    border-left-color: var(--gold);
+  .networking-card h3 { color: #fff; }
+  .networking-card p { color: rgba(255,255,255,0.7); }
+  .networking-card .program-time { background: var(--cyan); color: var(--dark); }
+  .networking-card .program-tag { 
+    background: rgba(212,168,67,0.2); 
+    color: var(--gold-light); 
   }
 
   /* ─── Q&A SECTION ─── */
   .qa-section {
-    padding: 72px 24px;
     background: #fff;
+    padding: 64px 24px;
+    margin-top: 48px;
   }
   .qa-container {
-    max-width: 900px;
+    max-width: 820px;
     margin: 0 auto;
   }
   .qa-intro {
     text-align: center;
-    font-size: 16px;
+    margin-bottom: 40px;
+    font-size: 15px;
     color: var(--text-muted);
-    margin-bottom: 48px;
     line-height: 1.7;
   }
   .qa-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
+    gap: 20px;
   }
   .qa-item {
     background: var(--cream);
-    padding: 24px;
+    padding: 20px 24px;
     border-radius: 12px;
-    display: flex;
-    gap: 16px;
-    align-items: start;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 3px solid var(--cyan);
   }
-  .qa-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(26,26,26,0.08);
-  }
-  .q-icon {
-    font-size: 24px;
-    flex-shrink: 0;
+  .qa-item .q-icon {
+    font-size: 20px;
+    margin-bottom: 8px;
   }
   .qa-item p {
     font-size: 14px;
@@ -445,57 +425,48 @@
     text-align: center;
   }
   .footer-content {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
+  }
+  .footer-section h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .footer-section a {
+    color: var(--cyan);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer-section a:hover {
+    text-decoration: underline;
   }
 
   /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(24px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
   @keyframes fadeDown {
-    from {
-      opacity: 0;
-      transform: translateY(-16px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
   /* ─── RESPONSIVE ─── */
-  @media (max-width: 768px) {
-    .hero { padding: 48px 20px 64px; min-height: 360px; }
+  @media (max-width: 600px) {
+    .audience-card { width: 100%; max-width: 300px; }
     .hero h1 { font-size: 36px; }
-    .hero-sub { font-size: 16px; }
-    .hero-meta { gap: 24px; margin-top: 32px; }
-    
-    .audience-strip { gap: 16px; padding: 40px 20px; }
-    .audience-card { width: 100%; max-width: 320px; }
-    
-    .program-section { padding: 48px 20px; }
-    .program-block { gap: 16px; }
-    .program-timeline { width: 24px; }
-    .timeline-dot { width: 12px; height: 12px; }
-    .program-card { padding: 20px; }
-    .program-card h3 { font-size: 16px; }
-    
-    .day-divider { margin: 56px 0 40px; }
-    .day-number { font-size: 36px; }
-    
+    .program-day-header { padding: 20px 24px; }
+    .program-card { padding: 20px 24px; }
     .qa-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
-
 <body>
 
 <!-- ─── HERO ─── -->
@@ -528,7 +499,7 @@
   </div>
 </section>
 
-<!-- ─── PARTNER LOGOS ─── -->
+<!-- ─── LOGOS ─── -->
 <section class="logos-section">
   <div class="logos-label">In collaborazione con</div>
   <div class="logos-container">
@@ -565,7 +536,7 @@
   </div>
 </section>
 
-<!-- ─── A CHI È RIVOLTO ─── -->
+<!-- ─── CHI PUÒ PARTECIPARE ─── -->
 <section class="audience-strip">
   <div class="audience-card">
     <div class="icon">🏘️</div>
@@ -584,24 +555,23 @@
   </div>
 </section>
 
-<!-- ─── PROGRAMMA ─── -->
+<!-- ─── PROGRAMMA VENERDÌ ─── -->
 <section class="program-section">
   <div class="section-title">
-    <div class="eyebrow">13-14 Febbraio 2026</div>
-    <h2>Programma Completo</h2>
+    <div class="eyebrow">Programma</div>
+    <h2>Due giorni per scoprire l'AI</h2>
   </div>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- GIORNO 1 - VENERDÌ 13 FEBBRAIO -->
-  <!-- ═══════════════════════════════════════════ -->
-  <div class="day-divider">
-    <div class="day-divider-content">
-      <div class="day-number">Giorno 1</div>
-      <div class="day-date">Venerdì 13 Febbraio · 17:30 - 20:00</div>
+  <div class="program-day-header">
+    <h3>Venerdì 13 Febbraio 2026</h3>
+    <div class="day-meta">
+      <span>🕐 Orario: <strong>17:30 - 20:00</strong></span>
+      <span>📍 Sala Trulli, Veroli</span>
+      <span>🎙️ Moderatore: <strong>Daniele Pigliacelli</strong></span>
     </div>
   </div>
 
-  <!-- Presentazione Innovation Bridge -->
+  <!-- 17:30 Saluti -->
   <div class="program-block">
     <div class="program-timeline">
       <div class="timeline-dot"></div>
@@ -610,16 +580,15 @@
     <div class="program-card">
       <div class="program-card-header">
         <span class="program-time">17:30</span>
-        <span class="program-tag tag-intro">Introduzione</span>
+        <span class="program-tag tag-saluti">Apertura</span>
       </div>
-      <h3>Saluti e Presentazione Innovation Bridge</h3>
-      <p>Apertura ufficiale del forum con i saluti istituzionali del Comune di Veroli e la presentazione di Innovation Bridge, l'acceleratore che collega startup, imprese e territorio.</p>
-      <div class="speaker">🎤 <strong>Comune di Veroli</strong></div>
-      <div class="speaker">🎤 <strong>Innovation Bridge</strong></div>
+      <h3>Saluti istituzionali</h3>
+      <p>Benvenuto del Sindaco di Veroli e introduzione all'evento. Una breve cornice su perché l'intelligenza artificiale è adesso il tema più importante per le comunità locali.</p>
+      <div class="speaker">🎤 <strong>Sindaco di Veroli</strong></div>
     </div>
   </div>
 
-  <!-- L'AI vi regala il tempo -->
+  <!-- 17:35 Presentazione IB -->
   <div class="program-block">
     <div class="program-timeline">
       <div class="timeline-dot"></div>
@@ -627,17 +596,16 @@
     </div>
     <div class="program-card">
       <div class="program-card-header">
-        <span class="program-time">17:45 (20 min)</span>
-        <span class="program-tag tag-talk">Talk Introduttivo</span>
+        <span class="program-time">17:35</span>
+        <span class="program-tag tag-presentazione">Presentazione</span>
       </div>
-      <h3>"L'AI vi regala la cosa più preziosa che non potete comprare: il tempo"</h3>
-      <p>Un'introduzione accessibile e pratica all'intelligenza artificiale. Come l'AI può semplificare la vita quotidiana, automatizzare compiti ripetitivi e liberare tempo per ciò che conta davvero.</p>
-      <div class="speaker">🎤 <strong>Alessandro Bernardi, Marketing Manager @ GE HealthCare</strong></div>
-      <div class="speaker" style="margin-top: 8px; font-size: 13px; opacity: 0.8;">Componente AI Forum Veroli</div>
+      <h3>Presentazione Innovation Bridge</h3>
+      <p>Storia, mission, obiettivi e attività della fondazione. Come è nata Innovation Bridge e il suo impegno nel diffondere l'innovazione tecnologica e l'intelligenza artificiale sul territorio.</p>
+      <div class="speaker">🎤 <strong>Giancarlo De Leonardo, Presidente Innovation Bridge</strong></div>
     </div>
   </div>
 
-  <!-- Demo Live -->
+  <!-- 17:50 Talk principale -->
   <div class="program-block">
     <div class="program-timeline">
       <div class="timeline-dot"></div>
@@ -645,17 +613,16 @@
     </div>
     <div class="program-card">
       <div class="program-card-header">
-        <span class="program-time">18:05 (40 min)</span>
-        <span class="program-tag tag-demo">Demo Live</span>
+        <span class="program-time">17:50</span>
+        <span class="program-tag tag-talk">Talk Principale</span>
       </div>
-      <h3>Demo Live: "L'AI non è magIA: esempi pratici che funzionano davvero"</h3>
-      <p>Dimostrazione pratica e interattiva di strumenti di intelligenza artificiale utilizzabili da subito. Dalle applicazioni quotidiane agli usi professionali, esempi concreti di come l'AI può migliorare la produttività.</p>
-      <div class="speaker">🎤 <strong>Daniele Pigliacelli, Co-founder @ Dopamina</strong></div>
-      <div class="speaker" style="margin-top: 8px; font-size: 13px; opacity: 0.8;">Componente AI Forum Veroli</div>
+      <h3>L'IA vi regala la cosa più preziosa che non potete comprare: il tempo.</h3>
+      <p>Ogni giorno perdiamo ore preziose in attività ripetitive: scrivere email, cercare informazioni, organizzare dati, creare contenuti. L'intelligenza artificiale non è fantascienza, è lo strumento concreto che restituisce il bene più prezioso: il tempo. Tempo per concentrarsi su ciò che conta davvero, per la famiglia, per crescere professionalmente, per innovare. Scopriamo come l'IA trasforma compiti di ore in operazioni di minuti, liberando energie creative e produttive che pensavamo perdute per sempre.</p>
+      <div class="speaker">🎤 <strong>Francesco Pompeo, Innovation Bridge e Co-Founder & CEO @ Dopamina</strong></div>
     </div>
   </div>
 
-  <!-- Q&A -->
+  <!-- 18:30 Demo live -->
   <div class="program-block">
     <div class="program-timeline">
       <div class="timeline-dot"></div>
@@ -663,40 +630,62 @@
     </div>
     <div class="program-card">
       <div class="program-card-header">
-        <span class="program-time">18:45 (15 min)</span>
+        <span class="program-time">18:30</span>
+        <span class="program-tag tag-demo">Demo Live 🔥</span>
+      </div>
+      <h3>L'AI non è magIA: esempi pratici che funzionano davvero</h3>
+      <p><strong>DEMO LIVE:</strong> Basta con le promesse miracolose. L'AI funziona davvero, ma solo se sai come usarla. In questa sessione pratica vedremo dal vivo applicazioni concrete e immediate: automatizzare attività ripetitive, creare contenuti professionali in minuti, ottimizzare processi aziendali, analizzare dati complessi. Niente trucchi, niente effetti speciali: solo strumenti reali, accessibili a tutti, che potete iniziare a usare già da domani. Esempi pratici testati sul campo che dimostrano come l'intelligenza artificiale sia uno strumento potente ma comprensibile, non magia incomprensibile riservata agli esperti.</p>
+      <div class="speaker">🎤 <strong>Francesco Cantinelli, Innovation Bridge e Co-Founder & Marketing Manager @ Dopamina</strong></div>
+    </div>
+  </div>
+
+  <!-- 19:00 Q&A -->
+  <div class="program-block">
+    <div class="program-timeline">
+      <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
+    </div>
+    <div class="program-card">
+      <div class="program-card-header">
+        <span class="program-time">19:00</span>
         <span class="program-tag tag-qa">Q&A</span>
       </div>
-      <h3>Sessione Domande & Risposte</h3>
-      <p>Spazio aperto per domande, curiosità e chiarimenti con i relatori. Un momento di confronto diretto per approfondire i temi trattati.</p>
+      <h3>Domande dal pubblico</h3>
+      <p>Sessione interattiva con il pubblico. Domande aperte su tutti gli aspetti dell'intelligenza artificiale: implementazione in azienda, formazione del personale, costi, benefici, rischi e opportunità. Uno spazio per approfondire i temi emeriti durante la serata e chiarire ogni dubbio.</p>
+      <div class="speaker">🎤 <strong>Moderato da Innovation Bridge</strong></div>
     </div>
   </div>
 
-  <!-- Networking -->
+  <!-- 19:30 Chiusura -->
   <div class="program-block">
     <div class="program-timeline">
       <div class="timeline-dot"></div>
     </div>
     <div class="program-card networking-card">
       <div class="program-card-header">
-        <span class="program-time">19:00 (60 min)</span>
-        <span class="program-tag tag-networking">Networking</span>
+        <span class="program-time">19:30</span>
+        <span class="program-tag">Networking</span>
       </div>
-      <h3>Conclusioni e Aperitivo di Networking</h3>
-      <p>Momento informale di networking tra partecipanti, relatori e organizzatori. Un'occasione per creare connessioni, scambiare idee e approfondire collaborazioni.</p>
+      <h3>Conclusioni e aperitivo di networking</h3>
+      <p>Considerazioni finali del gruppo AI FORUM VEROLI e momento di confronto informale tra partecipanti, relatori e aziende. Un'occasione per scambiare idee, conoscere Innovation Bridge da vicino e fare rete tra imprenditori, studenti e professionisti.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROGRAMMA SABATO ─── -->
+<section class="program-section" style="padding-top: 24px;">
+  
+  <div class="program-day-header">
+    <h3>Sabato 14 Febbraio 2026</h3>
+    <div class="day-meta">
+      <span>🕐 Orario: <strong>9:00 - 13:00</strong></span>
+      <span>📍 Sala Trulli, Veroli</span>
+      <span>🎯 Focus: <strong>Aziende del territorio</strong></span>
+      <span>🎙️ Moderatore: <strong>Daniele Pigliacelli</strong></span>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- GIORNO 2 - SABATO 14 FEBBRAIO -->
-  <!-- ═══════════════════════════════════════════ -->
-  <div class="day-divider">
-    <div class="day-divider-content">
-      <div class="day-number">Giorno 2</div>
-      <div class="day-date">Sabato 14 Febbraio · 9:00 - 12:30</div>
-    </div>
-  </div>
-
-  <!-- Saluti -->
+  <!-- 9:00 Apertura -->
   <div class="program-block">
     <div class="program-timeline">
       <div class="timeline-dot"></div>
